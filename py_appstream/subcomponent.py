@@ -40,7 +40,7 @@ class Description(Node):
     def parse_tree(self, node, lang_code_func=None):
         lang_part_counts = {}
         for n in node:
-            if n.tag == ['p', 'heading']:
+            if n.tag in ['p', 'heading']:
                 lang = self._prep_lang(n, lang_code_func)
                 if lang == 'x-test':
                     continue
